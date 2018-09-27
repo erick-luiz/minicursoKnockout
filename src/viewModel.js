@@ -1,15 +1,12 @@
 function appViewModel(){
     var self = this;
 
-    // Coloquei as variaveis em pt pros alunos mexerem nesse arquivo
-    self.feriados = ko.observableArray([]);
     self.cidadeSelecionada = ko.observable("");
-    
 
-    // Claramente isso nao ta funcionando 
-    if(self.cidadeSelecionada() != ""){
-        getHolidays(self.cidadeSelecionada, 'RS', '2018');
-    }
+    self.feriados = ko.computed(function(){
+    	return getFeriados(self.cidadeSelecionada());
+    }, self);
+
 }
 
 vm = new appViewModel();
