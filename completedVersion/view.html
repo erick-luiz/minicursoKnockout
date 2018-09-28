@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Feriados</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Consulta de feriados</a>
+    </nav>
+
+    <!-- Conteudo principal -->
+    <main id="main">
+        <div class="row">
+            <!-- Sidebar - Escolha de cidades -->
+            <nav class="col-md-3 sidebar-nav">
+                <h4 class="sidebar-title">Cidades</h4>
+                <ul>
+                    <li class="black-border">
+                        <label for="DoisIrmaos">
+                            <input value="DOIS_IRMAOS" type="radio" id="DoisIrmaos" name="choseCity" data-bind="checked: cidadeSelecionada"> Dois Irmãos</label>
+                    </li>
+                    <li class="yellow-border">
+                        <label for="Erechim">
+                            <input value="ERECHIM" type="radio" id="Erechim" name="choseCity" data-bind="checked: cidadeSelecionada"> Erechim</label>
+                    </li>
+                    <li class="red-border">
+                        <label for="PassoFundo">
+                            <input value="PASSO_FUNDO" type="radio" id="PassoFundo" name="choseCity" data-bind="checked: cidadeSelecionada"> Passo Fundo</label>
+                    </li>
+                    <li class="pink-border">
+                        <label for="PortoAlegre">
+                            <input value="PORTO_ALEGRE" type="radio" id="PortoAlegre" name="choseCity" data-bind="checked: cidadeSelecionada"> Porto Alegre</label>
+                    </li>
+                    <li class="blue-border">
+                        <label for="RioGrande">
+                            <input value="RIO_GRANDE" type="radio" id="RioGrande" name="choseCity" data-bind="checked: cidadeSelecionada"> Rio Grande</label>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Escolha de datas e tabela -->
+            <div class="col-md-9 holidays">
+                <!-- Data -->
+                <div class="form-group row">
+                    <label for="example-date-input" class="col-2 col-form-label">Filtro data:</label>
+                    <div class="col-3">
+                        <input class="form-control" type="date" value="" id="example-date-input">
+                    </div>
+                </div>
+                
+                <!-- Tabela -->
+                <div class="table-scroll">
+                    <table class="table table-striped">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Data</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: feriados">
+                            <tr>
+                                <td data-bind="text: date">25/12/2018</td>
+                                <td data-bind="text: name">Natal</td>
+                                <td data-bind="text: type">Nacional</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="navbar bg-dark navbar-dark fixed-bottom justify-content-center">
+        <p class="">Semana Acadêmica IFRS 2018 - Compasso</p>
+    </footer>
+
+    
+    <script src="lib/knockout.js"></script>
+    <script src="src/model.js"></script>
+    <script src="src/viewModel.js"></script>
+</body>
+</html>
