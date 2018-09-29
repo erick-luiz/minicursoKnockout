@@ -7,7 +7,7 @@ function getFeriados(city){
 
 (function(){
 
-var citys = ["DOISIRMAOS","ERECHIM","PASSO_FUNDO","PORTO_ALEGRE","RIO_GRANDE"];
+var citys = ["DOIS_IRMAOS","ERECHIM","PASSO_FUNDO","PORTO_ALEGRE","RIO_GRANDE"];
 var ano = '2018';
 var estado = 'RS'; 
 var token = 'ZXJpY2subG9wZXNAY29tcGFzc28uY29tLmJyJmhhc2g9MjI0Nzk0ODMx';
