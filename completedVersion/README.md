@@ -1,2 +1,0 @@
-# minicursoKnockout
-Mini Curso Knockout

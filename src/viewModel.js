@@ -1,13 +1,11 @@
-function appViewModel(){
-    var self = this;
+(function(ko,apiFeriados){
+    'use stric';
+    function appViewModel(){
+      
+    }
 
-    self.cidadeSelecionada = ko.observable("");
+    ko.applyBindings(new appViewModel());
+})(window.ko, window.apiFeriados);
 
-    self.feriados = ko.computed(function(){
-    	return getFeriados(self.cidadeSelecionada());
-    }, self);
 
-}
 
-vm = new appViewModel();
-ko.applyBindings(vm);

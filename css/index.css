@@ -7,6 +7,10 @@ footer{
     color: white;
 }
 
+tr:hover{
+    background-color: #17a3b838;
+}
+
 #main{
     padding: 1em;
     margin-bottom: 4em;
@@ -43,7 +47,7 @@ footer{
 }
 
 .black-border{
-    border-left: 6px solid rgb(0, 0, 0)!important;
+    border-left: 6px solid rgb(0, 0, 0);
 }
 .blue-border{
     border-left: 6px solid rgb(9, 157, 255)!important;
